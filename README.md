@@ -87,7 +87,7 @@ For each iteration i:
            Sample z(new) = k with probability proportional to conditional probability equation (gibbs sampling equation)
            Increment n(d,z(new)) , v(z(new), w(d,n))
 
-[3:39 AM, 11/23/2022] Omar.: Model Evaluation 
+Model Evaluation 
 ==============
 
 - Human in the loop:
