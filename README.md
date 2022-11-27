@@ -47,6 +47,11 @@ Parameters = theta, phai
 
 Use perplexity to see if your model is representative of the documents you are scoring on it.
 
+K determination:
+1- Try different k, choose the best likelihood.
+2- Use HDP-LDA, take uniform sample from corpus if large.
+3- Back to 1, try small interval around k.
+
 Recommendation Engine: Collaborative Filtering Algorithm (user behavior based recommender) + Topic Modeling = Collaborative Topic Modeling
 Using keywords (as content-based recommenders) over collaborative filtering to collaborative topic modeling recommenders.
 
@@ -79,3 +84,62 @@ For each iteration i:
            Decrement n(d,z(old)) , v(z(old), w(d,n))
            Sample z(new) = k with probability proportional to conditional probability equation (gibbs sampling equation)
            Increment n(d,z(new)) , v(z(new), w(d,n))
+
+
+
+Why is LDA a mixture model?
+
+LDA is not a mixture model. It is an admixture model or a mixed-membership model.
+Mixture models have a single latent variable that denotes which cluster they're in. This is often written as an indicator variable z.
+LDA is a model over documents (a bag of words), and has a latent variable for topic assignments for every token: z1…zNz1…zN
+Thus, words can belong to different clusters. This intuitively makes sense because documents can be about more than one thing. I.e., about both technology and business. This often results in better models of real text than pure mixture models.
+
+In a mixed-membership latent variable model, the definition of word co-occurrence is stricter that in a mixture model where only one topic is allocated per document. Words have to co-occur more tightly in a mixed-membership model. In other words, in a mixture model we assert that words in a document co-occur and given that we ask the model to return the highest probable topic. Whereas in a mixed-membership model we assert that words co-occur in a topic within a document and we ask the model to return the highest probable topics in that document. the Latent Dirichlet Allocation model is an example of a mixed-membership model.
+
+What is the difference between LDA (linear analysis discriminant) and LDA (latent Dirichlet allocation)?
+
+Linear Discriminant Analysis : LDA attempts to find a feature subspace that maximizes class separability. It is basically about supervised technique, which is primarily used for classification. LDA makes assumptions about normally distributed classes and equal class co-variances, however, this only applies for LDA as classifier and LDA for dimensional reduction can also work reasonably well if those assumptions are violated.
+As LDA is supervised, so it needs labelled data. This draws various similarities between PCA too in term of the way it uses co-variance matrix.
+
+Latent Dirichlet Allocation : is primarily an unsupervised technique used for finding topic distribution. It is based on Dirichlet Allocation and works on based of iteration to find best topic underlying solving using “Joint probabilities”. It is generally used on text data.
+
+What is the difference between latent Dirichlet allocation and probabilistic topic models?
+
+There are many flavors of probabilistic topic models. LDA is a prototypical example. pLSI is a precursor of LDA and correlated topic models are a successor. There are a cottage industry of other probabilistic topic models. That add additional features to topic models:
+
+hierarchical LDA
+
+LDAWN
+
+Syntactic Topic Models
+
+polylingual LDA
+
+shLDA
+
+supervised LDA
+
+and many others ...
+
+
+Is it still necessary to learn LDA (latent Dirichlet distribution)?
+
+Necessary?
+Well, I usually like to call the general area topic models, which itself is an instance of the general area of discrete matrix factorisation (like gamma-Poisson models, GaP). So in that sense, its much broader than simple old LDA.
+But when teaching things like LDA and GaP, which should be taught together, the thing I like is the fact that you can teach a whole bunch of things in one go:
+
+variational methods
+
+Gibbs sampling
+
+collapsed Gibbs sampling
+
+hyper-parameter optimisation
+
+problems with maximum likelihood methods
+
+regularisation versus Bayesian MAP versus Bayesian MCMC
+
+why we want non-parametrics (just the why… teaching NP comes later)
+
+Its just a fabulous problem to explain a whole bunch of ideas on. So you might not need LDA, but matrix factorisation and all the above stuff are pretty handy to know. You’ll learn LDA as a by-product.
