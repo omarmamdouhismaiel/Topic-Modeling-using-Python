@@ -5,6 +5,8 @@ Topic models with SVD matrix factorization which used in 'Latent Semantic Analys
 
 Topic models with a generative probabilistic model, a bagofwords model, Latent Dirichlet Allocation (LDA) Algorithm are popular in Latent Variables/Topics and structure Discovering (Semantic Analysis) or Topics/Words distributions Discovering. And in soft/fuzzy clustering whether in word clusters represents the topics as multinomial distribution of words, or in topic cluster represents the document as multinomial distribution of topics.
 
+Each document gets represented as a pattern of LDA topics (multinomial distribution). Making Every document appear different enough to be separable, similar enough to be grouped, like fingerprint or DNA.
+
 LDA = probabilistic version of LSA = a fully Bayesian version of pLSI
 LSA = PCA applied to text data = linear algebra method = LSI Latent Semantic Indexing
 
@@ -143,3 +145,16 @@ regularisation versus Bayesian MAP versus Bayesian MCMC
 why we want non-parametrics (just the why… teaching NP comes later)
 
 Its just a fabulous problem to explain a whole bunch of ideas on. So you might not need LDA, but matrix factorisation and all the above stuff are pretty handy to know. You’ll learn LDA as a by-product.
+
+
+
+Why is LDA a mixture model?
+
+LDA is not a mixture model. It's an admixture model or a mixed-membership model.
+
+Mixture models have a single latent variable that denotes which cluster they're in. This is often written as an indicator variable z.
+
+LDA is a model over documents (a bag of words), and has a latent variable for topic assignments for every token: Z1,...,Zn.
+
+Thus, words can belong to different clusters. This intutively makes sense because documents cen be about more than one thing, I.e., about both technology and business. This often results in better models of real text than pure mixture models.
+
