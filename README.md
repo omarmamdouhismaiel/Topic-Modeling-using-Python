@@ -1,6 +1,39 @@
 # Topic-Modeling-using-Python
 Using Topic Models in Latent-Variables Cluster-Analysis, Information Retrieval (search), Recommender System applications.
 
+# Topic Modeling
+
+- 'Probabilistic' Topic Modeling.
+- Topic Extraction Process from large amount of documents.
+- Text Mining tool.
+- Soft Topic Assignment (Modern Topic Modeling).
+- Unlabelled-Text Analysis (Unsupervised Learning).
+- Similar-Words Clustering.
+- can work on continuously incoming data.
+
+### Basic Methods
+
+-> Latent Semantic Analysis (LSA).
+
+-> Probabilistic Latent Semantic Analysis (PLSA).
+
+-> Latent Dirichlet Allocation (LDA).
+
+-> Correlated Topic Model (CTM).
+
+### Topic Evolution Model
+
+-> Topic Over Time (TOT).
+
+-> Dyamic Topic Models (DTM).
+
+-> Multiscale Topic Tomography (MTT).
+
+-> Dynamic Topic Correlation Detection (DTCD).
+
+-> Detecting Topic Evolution (DTE).
+
+
 Topic models with SVD matrix factorization which used in 'Latent Semantic Analysis (LSA)' Algorithm are popular in Information Retrieval.
 
 Topic models with a generative probabilistic model, a bagofwords model, Latent Dirichlet Allocation (LDA) Algorithm are popular in Latent Variables/Topics and structure Discovering (Semantic Analysis) or Topics/Words distributions Discovering. And in soft/fuzzy clustering whether in word clusters represents the topics as multinomial distribution of words, or in topic cluster represents the document as multinomial distribution of topics.
