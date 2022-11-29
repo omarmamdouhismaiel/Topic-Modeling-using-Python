@@ -3,6 +3,42 @@ Using Topic Models in Latent-Variables Cluster-Analysis, Information Retrieval (
 
 In statistics and natural language processing, a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body.
 
+In NLP, Topic modeling is the method of extracting needed attributes from a bag of words. This is critical because each word in the corpus is treated as a feature in NLP. As a result, feature reduction allows us to focus on the relevant material rather than wasting time sifting through all of the data's text.
+
+In research, Topic modeling is a type of statistical modeling for discovering the abstract “topics” that occur in a collection of documents. This process is useful for qualitative data analysis, particularly automating the review of large numbers of documents early on in the research process.
+
+How is topic modeling done?
+Topic modelling is done using LDA(Latent Dirichlet Allocation). Topic modelling refers to the task of identifying topics that best describes a set of documents. These topics will only emerge during the topic modelling process (therefore called latent).
+
+The aim of topic modeling is to discover the themes that run through a corpus by analyzing the words of the original texts.
+
+Why LDA is used in NLP?
+In natural language processing, Latent Dirichlet Allocation (LDA) is a generative statistical model that explains a set of observations through unobserved groups, and each group explains why some parts of the data are similar. The LDA is an example of a topic model.
+
+SVM vs LDA: SVM makes no assumptions about the data at all, meaning it is a very flexible method. The flexibility on the other hand often makes it more difficult to interpret the results from a SVM classifier, compared to LDA. SVM classification is an optimization problem, LDA has an analytical solution
+
+Which is better PCA or LDA?
+PCA performs better in case where number of samples per class is less. Whereas LDA works better with large dataset having multiple classes; class separability is an important factor while reducing dimensionality.
+
+Linear Discriminant Analysis or LDA is a dimensionality reduction technique. It is used as a pre-processing step in Machine Learning and applications of pattern classification.
+
+In order to train a LDA model you need to provide a fixed assume number of topics across your corpus. There are a number of ways you could approach this: Run LDA on your corpus with different numbers of topics and see if word distribution per topic looks sensible.
+
+Topic models meet discourse analysis: a quantitative tool for a qualitative approach.
+
+Is topic modelling content analysis?
+topic models are a useful tool for automated content analysis, both when exploring a large amount of data and when it comes to systematically identifying relationships between topics and other variables.
+
+LDA is a Bayes classifier, but not a naive Bayes classifier. The naive Bayes classifier is like LDA with the restriction that the covariance matrix Σ is a diagonal matrix. On the other hand, LDA is like naive Bayes classifier with restrictions that the distribution is assumed to be Gaussian and similar in all classes.
+
+The Amazon SageMaker Latent Dirichlet Allocation (LDA) algorithm is an unsupervised learning algorithm that attempts to describe a set of observations as a mixture of distinct categories. LDA is most commonly used to discover a user-specified number of topics shared by documents within a text corpus.
+
+How LDA works?
+1. The number of words in the document are determined.
+2. A topic mixture for the document over a fixed set of topics is chosen.
+3. A topic is selected based on the document's multinomial distribution.
+4. Now a word is picked based on the topic's multinomial distribution.
+
 # Topic Modeling
 
 - 'Probabilistic' Topic Modeling.
